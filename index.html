@@ -6,59 +6,63 @@
   <title>Apple Tree Pool Villa - Khao Yai</title>
   <style>
     body {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
+      background-color: #fff;
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      color: #fff;
+      color: #222;
       position: relative;
-      background-color: #000; /* กรณีโหลดรูป background ไม่ขึ้น */
     }
     .header-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-      border-top-left-radius: 18px;
-      border-top-right-radius: 18px;
-    }
+  display: block;
+  margin: 0 auto;
+  max-width: 860px; /* กำหนดเท่ากับปฏิทิน */
+  width: 100%; /* ขยายเต็มพื้นที่ในขนาด max-width */
+  height: auto;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
     .calendar-container {
-      background: rgba(218, 14, 51, 0.82);
+      background: rgba(218, 14, 51, 0.83);
       max-width: 860px;
-      margin: 0 auto 60px auto;
+      margin: 0 auto 38px auto;
       padding: 24px 32px 16px 32px;
       border-radius: 0 0 18px 18px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-      backdrop-filter: blur(1.5px);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.15);
       text-align: center;
+      color: #fff;
     }
     .calendar-container h2 {
       margin: 0 0 18px 0;
       font-size: 2rem;
       font-weight: 600;
-      color: #fff;
       letter-spacing: 1px;
-      text-shadow: 0 2px 6px #0007;
+      text-shadow: 0 2px 6px #0003;
     }
-    .calendar-container iframe {
+    .responsive-iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 62.5%;
+      height: 0;
+      overflow: hidden;
+    }
+    .responsive-iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
       border-radius: 6px;
       box-shadow: 0 3px 18px #0002;
-      width: 800px;
-      max-width: 100%;
       background: #fff;
-      border-width: 0;
     }
-    /* Legend */
     .calendar-legend {
       display: flex;
       justify-content: center;
       gap: 32px;
       font-family: 'Open Sans', Arial, sans-serif;
       font-size: 1.03rem;
-      margin-bottom: 16px;
-      margin-top: 8px;
+      margin: 20px 0 24px 0;
       color: #fff;
     }
     .legend-box {
@@ -77,32 +81,127 @@
       background: #358864;
       border-color: #ffffff;
     }
-    /* Responsive */
-    @media (max-width: 900px) {
-      .calendar-container { padding: 12px; }
-      .calendar-container iframe { width: 100%; }
+    footer.footer {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto 40px auto;
+      padding: 18px 16px 0 16px;
+      box-sizing: border-box;
+      font-family: 'Open Sans', Arial, sans-serif;
+      color: #222;
+      background: #fff;
+    }
+    .footer-content {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .villa-logo {
+      width: 150px;
+      height: auto;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    .villa-text {
+      font-weight: 600;
+      color: #67775e;
+      min-width: 200px;
+      margin-right: 24px;
+    }
+    .villa-text h3 {
+      margin: 0 0 6px 0;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #922636;
+    }
+    .villa-text p {
+      margin: 4px 0;
+    }
+    .villa-text .footer-link {
+      color: #67775e;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .villa-text .footer-link:hover {
+      text-decoration: underline;
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .social-link img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s ease;
+    }
+    .social-link:hover img {
+      transform: scale(1.18);
+    }
+    @media (max-width: 800px) {
+      .footer-content {
+        justify-content: flex-start;
+      }
+      .villa-logo {
+        width: 48px;
+        margin-right: 10px;
+      }
+      .villa-text h3 {
+        font-size: 1.1rem;
+      }
+      .villa-text p {
+        font-size: 0.9rem;
+      }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- รูปภาพ header เชื่อมติดกับปฏิทิน -->
   <img class="header-image" src="Background.jpeg" alt="Apple Tree Pool Villa" />
-  
   <div class="calendar-container">
     <h2>ปฏิทินบ้านพัก Apple Tree Pool Villa - Khao Yai</h2>
-    <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FBangkok&mode=MONTH&title=Apple%20Tree%20Pool%20Villa%20-%20Khao%20Yai&showPrint=0&showCalendars=0&src=ODIzZGQ5NDc1Yjg0ZjlhODc3ODQxNTQzZGZiYzRkZGFkZGRlZjVjN2YwM2I5NTc1YzAyMzhlYzg5MmJmNGVjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amkxc2E3b2ZzN2JxOTJqNWo2dGQ3cTBsOGwzNjNzZmxAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZmhwdnRnaGs1a3YwYnB1Z2txZjVzbDYzbDA0YWFibW1AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bjFrcG4yOGNxcGkybHZ0aGJzNzlrYnNhcTUxbWZwajNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23d81b60&color=%23d81b60&color=%23d81b60&color=%23d81b60&color=%23009688" 
-      frameborder="0" 
-      scrolling="yes" 
-      height="500" 
-      width="800" 
-      style="border-width:0;">
-    </iframe>
-
-    <!-- ส่วนแสดง Legend ของปฏิทิน -->
+    <div class="responsive-iframe-container">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FBangkok&mode=MONTH&title=Apple%20Tree%20Pool%20Villa%20-%20Khao%20Yai&showPrint=0&showCalendars=0&src=ODIzZGQ5NDc1Yjg0ZjlhODc3ODQxNTQzZGZiYzRkZGFkZGRlZjVjN2YwM2I5NTc1YzAyMzhlYzg5MmJmNGVjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amkxc2E3b2ZzN2JxOTJqNWo2dGQ3cTBsOGwzNjNzZmxAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZmhwdnRnaGs1a3YwYnB1Z2txZjVzbDYzbDA0YWFibW1AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bjFrcG4yOGNxcGkybHZ0aGJzNzlrYnNhcTUxbWZwajNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVyLmdvb2dsZS5jb20&color=%23d81b60&color=%23d81b60&color=%23d81b60&color=%23d81b60&color=%23009688"
+        frameborder="0"
+        scrolling="yes"
+        allowfullscreen>
+      </iframe>
+    </div>
     <div class="calendar-legend">
       <span class="legend-box booked"></span> มีการจองแล้ว
       <span class="legend-box holiday"></span> วันหยุด
     </div>
   </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="image.jpg" alt="Apple Tree Pool Villa Logo" class="villa-logo" />
+      <div class="villa-text">
+        <h3>Apple Tree Pool Villa</h3>
+        <p>200 ตำบลวังกะทะ อำเภอปากช่อง นครราชสีมา</p>
+        <p>
+          Facebook:
+          <a href="https://www.facebook.com/AppleTreePoolVilla" target="_blank" rel="noopener" class="footer-link">
+            facebook.com/AppleTreePoolVilla
+          </a>
+        </p>
+        <p>Line : @732kdssm</p>
+      </div>
+      <div class="social-links">
+        <a href="https://lin.ee/nQeIw3O" target="_blank" rel="noopener" aria-label="Line" class="social-link line">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670089.png" alt="Line Icon" />
+        </a>
+        <a href="https://www.facebook.com/AppleTreePoolVilla" target="_blank" rel="noopener" aria-label="Facebook" class="social-link facebook">
+          <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook Icon" />
+        </a>
+        <a href="https://maps.app.goo.gl/yjMH1oKB8KanRYdA7" target="_blank" rel="noopener" aria-label="Google Maps" class="social-link google-maps">
+          <img src="https://cdn-icons-png.flaticon.com/512/2875/2875433.png" alt="Google Maps Icon" />
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
