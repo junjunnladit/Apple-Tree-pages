@@ -6,8 +6,6 @@
   <title>Apple Tree Pool Villa - Khao Yai</title>
   <style>
     body {
-      /* ใช้ภาพพื้นหลังจากไฟล์ key visual */
-      background-image: url('ENG-aibcch-ngaelaraebiiybbaanphak_Apple-Tree-Pool-Villa-2.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -16,14 +14,22 @@
       font-family: 'Segoe UI', Arial, sans-serif;
       color: #fff;
       position: relative;
+      background-color: #000; /* กรณีโหลดรูป background ไม่ขึ้น */
+    }
+    .header-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
     }
     .calendar-container {
-      /* กล่องปฏิทิน กึ่งโปร่งใส */
-      background: rgba(218, 14, 51, 0.82); /* เฉดแดงเข้มใกล้เคียงธีมหลัก */
+      background: rgba(218, 14, 51, 0.82);
       max-width: 860px;
-      margin: 60px auto 0 auto;
-      padding: 32px 32px 16px 32px;
-      border-radius: 18px;
+      margin: 0 auto 60px auto;
+      padding: 24px 32px 16px 32px;
+      border-radius: 0 0 18px 18px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
       backdrop-filter: blur(1.5px);
       text-align: center;
@@ -42,7 +48,36 @@
       width: 800px;
       max-width: 100%;
       background: #fff;
+      border-width: 0;
     }
+    /* Legend */
+    .calendar-legend {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 1.03rem;
+      margin-bottom: 16px;
+      margin-top: 8px;
+      color: #fff;
+    }
+    .legend-box {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+      border-radius: 5px;
+      vertical-align: middle;
+      border: 1.5px solid #fff;
+    }
+    .legend-box.booked {
+      background: #ab0f39;
+    }
+    .legend-box.holiday {
+      background: #358864;
+      border-color: #ffffff;
+    }
+    /* Responsive */
     @media (max-width: 900px) {
       .calendar-container { padding: 12px; }
       .calendar-container iframe { width: 100%; }
@@ -50,16 +85,24 @@
   </style>
 </head>
 <body>
-  <img src="IMG_2195.jpeg" alt="Title Image" style="display:block; margin:auto; max-width:100%; height:auto;">
+  <!-- รูปภาพ header เชื่อมติดกับปฏิทิน -->
+  <img class="header-image" src="Background.jpeg" alt="Apple Tree Pool Villa" />
+  
   <div class="calendar-container">
     <h2>ปฏิทินบ้านพัก Apple Tree Pool Villa - Khao Yai</h2>
     <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FBangkok&mode=MONTH&title=Apple%20Tree%20Pool%20Villa%20-%20Khao%20Yai&showPrint=0&showCalendars=0&src=ODIzZGQ5NDc1Yjg0ZjlhODc3ODQxNTQzZGZiYzRkZGFkZGRlZjVjN2YwM2I5NTc1YzAyMzhlYzg5MmJmNGVjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amkxc2E3b2ZzN2JxOTJqNWo2dGQ3cTBsOGwzNjNzZmxAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZmhwdnRnaGs1a3YwYnB1Z2txZjVzbDYzbDA0YWFibW1AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bjFrcG4yOGNxcGkybHZ0aGJzNzlrYnNhcTUxbWZwajNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23d81b60&color=%23d81b60&color=%23d81b60&color=%23d81b60&color=%23009688" 
-      style="border-width:100" 
-      width="800" 
-      height="400" 
       frameborder="0" 
-      scrolling="yes">
+      scrolling="yes" 
+      height="500" 
+      width="800" 
+      style="border-width:0;">
     </iframe>
+
+    <!-- ส่วนแสดง Legend ของปฏิทิน -->
+    <div class="calendar-legend">
+      <span class="legend-box booked"></span> มีการจองแล้ว
+      <span class="legend-box holiday"></span> วันหยุด
+    </div>
   </div>
 </body>
 </html>
