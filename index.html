@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 body {
   background-color: #fff;
@@ -41,6 +41,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   text-shadow: 0 2px 6px #0003;
+  font-family: 'Kanit', sans-serif;
 }
 .responsive-iframe-container {
   position: relative;
@@ -79,8 +80,13 @@ body {
   vertical-align: middle;
   border: 1.5px solid #fff;
 }
-.legend-box.booked { background: #ab0f39; }
-.legend-box.holiday { background: #358864; border-color: #fff;}
+.legend-box.booked {
+  background: #ab0f39;
+}
+.legend-box.holiday {
+  background: #358864;
+  border-color: #fff;
+}
 
 /* villa-description with image left and highlights grid */
 .villa-description {
@@ -126,6 +132,25 @@ body {
   justify-self: center;
   grid-row: 1 / 4;
 }
+
+/* ปรับภาพ .left-image ให้อยู่บน h2 เมื่อจอเล็ก */
+@media (max-width: 700px) {
+  .villa-description {
+    grid-template-columns: 1fr; /* 1 คอลัมน์ */
+  }
+  .villa-description img.left-image {
+    grid-row: auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    justify-self: center;
+  }
+  .villa-description h2 {
+    grid-column: 1;
+    justify-content: center;
+  }
+}
+
 .villa-highlights {
   grid-column: 2 / 3;
   display: grid;
@@ -177,11 +202,12 @@ body {
   text-align: center;
   font-family: 'Kanit', sans-serif;
 }
+
 /* รายละเอียดบ้านพัก (Grid) */
-.villa-details-section { 
-  max-width: 860px; 
-  margin: 0 auto 30px auto; 
-  padding: 0 32px; 
+.villa-details-section {
+  max-width: 860px;
+  margin: 0 auto 30px auto;
+  padding: 0 32px;
   font-family: 'Kanit', sans-serif;
 }
 .villa-details-section h3 {
@@ -215,6 +241,7 @@ body {
   margin-bottom: 9px;
   filter: grayscale(0.3) brightness(0.7);
 }
+
 /* Facilities Section */
 .villa-facilities {
   max-width: 860px;
@@ -243,6 +270,7 @@ body {
   font-size: 1rem;
   line-height: 1.3;
 }
+
 /* Gallery Section */
 .villa-gallery {
   max-width: 100vw;
@@ -267,10 +295,10 @@ body {
   gap: 12px;
   width: 90vw;
   margin: 0 auto;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 .gallery-scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 .gallery-scroll img {
   flex-shrink: 0;
@@ -286,6 +314,7 @@ body {
 .gallery-scroll img:hover {
   transform: scale(1.03);
 }
+
 /* Footer */
 footer.footer {
   width: 100%;
@@ -382,7 +411,7 @@ footer.footer {
   <section class="villa-description">
     <img src="Description.jpeg" alt="Apple Tree Pool Villa" class="left-image" />
     <div>
-    <h2><img src="image.jpg" alt="Apple Tree Pool Villa Logo" /> Apple Tree Pool Villa <br> พูลวิลล่าส่วนตัวกลางธรรมชาติ</h2>
+    <h2><img src="image.jpg" alt="Logo" /> Apple Tree Pool Villa <br> พูลวิลล่าส่วนตัวกลางธรรมชาติ</h2>
     <div class="villa-highlights">
       <div class="highlight-circle">
         <img src="https://itp1.itopfile.com/ImageServer/c92e01ec59a8ddac/0/0/iTopPlus913688828974.webp" alt="[translate:บ้านพัก]" />
