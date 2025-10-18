@@ -389,6 +389,65 @@ footer.footer {
   transform: scale(1.18);
   filter: brightness(80%);
 }
+.contact-buttons {
+  max-width: 860px;
+  margin: 20px auto 38px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+.contact-buttons h2 {
+  font-size: 1.32rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  margin-left: 8px;
+  margin-top: 0;
+  color: #551014;
+  font-family: 'Kanit', sans-serif;
+}
+.contact-buttons a {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+}
+.contact-buttons a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.btn-line {
+  background-color: #00c300;
+  box-shadow: 0 4px 8px rgba(0, 195, 0, 0.6);
+}
+.btn-line:hover {
+  background-color: #009900;
+}
+.btn-facebook {
+  background-color: #1877f2;
+  box-shadow: 0 4px 8px rgba(24, 119, 242, 0.6);
+}
+.btn-facebook:hover {
+  background-color: #0f5ed8;
+}
+
+/* ปรับบนมือถือ */
+@media (max-width: 600px) {
+  .contact-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .contact-buttons a {
+    justify-content: center;
+  }
+}
   </style>
   
 </head>
@@ -410,6 +469,17 @@ footer.footer {
     </div>
   </div>
   
+<div class="contact-buttons">
+  <h2>จองบ้านพักหรือสอบถามข้อมูลเพิ่มเติม</h2>
+  <a href="https://lin.ee/nQeIw3O" target="_blank" class="btn-line" aria-label="Add Line">
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670089.png" alt="Line Icon" /> แอดไลน์
+  </a>
+  <a href="https://m.me/AppleTreePoolVilla" target="_blank" class="btn-facebook" aria-label="Facebook Messenger">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook Messenger Icon" /> แชทผ่าน Facebook
+  </a>
+</div>
+
+
   <section class="villa-description">
     <img src="Description.jpeg" alt="Apple Tree Pool Villa" class="left-image" />
     <div>
@@ -560,6 +630,50 @@ footer.footer {
     <img src="Gallery/25.jpg" alt="Gallery Image 25" />
   </div>
 </section>
+
+<section class="villa-details-section">
+  <h3>รายละเอียดเพิ่มเติม</h3>
+  <ul>
+    <li>พักสูงสุดได้ 12 ท่าน</li>
+    <li>เสริมท่านละ 500 บาท (พร้อมที่นอนเสริม)</li>
+    <li>เด็กพักฟรี (นอนกับผู้ปกครอง)</li>
+    <li>มัดจำจอง 3,000 บาท ที่เหลือชำระเต็มวันเข้าพัก</li>
+    <li>ประกันบ้าน 3,000 บาท (คืนเต็มหลังเช็คเอาท์ถ้าบ้านไม่เสียหาย)</li>
+  </ul>
+  <h3>กฎระเบียบบ้านพัก</h3>
+  <ul>
+    <li>Check In : 14:00 น.</li>
+    <li>Check Out : 11:30 น.</li>
+    <li>ทางบ้านพักจัดเตรียมถ่าน,น้ำดื่มและน้ำแข็งไว้ให้</li>
+    <li>ห้ามสูบบุหรี่/กัญชาและยาเสพติดทุกชนิดภายในห้องพัก</li>
+    <li>ห้ามกระโดดน้ำ อันตรายถึงชีวิต</li>
+    <li>ห้ามนำสัตว์เลี้ยงเข้ามาบริเวณบ้านพักก่อนได้รับอนุญาต ฝ่าฝืนปรับ 3,000 บาท</li>
+    <li>งดส่งเสียงดังหลัง 22:00 น. (ภายนอกบ้านพัก)</li>
+    <li>ห้ามเข้าพักเกินจำนวนที่จอง + กำหนดไว้</li>
+    <li>กรุณาล้างอุปกรณ์เครื่องครัว แก้วน้ำ จาน ชามทุกชิ้นหลังใช้งาน กรณีไม่สะดวกล้างมีค่าบริการล้าง 500 บาท</li>
+    <li>ชุดเครื่องนอนและผ้าขนหนู หากเลอะเลือด น้ำหมึก หรืออื่นๆ ที่ซักยากหรือไม่สามารถซักออกได้ ขออนุญาตคิดค่าปรับตามจริง</li>
+    <li>ขอความกรุณางดนำอาหารและเครื่องดื่มลงรับประทานในสระ หากพบเศษอาหารหรือน้ำเปลี่ยนสภาพจะมีค่าปรับ 3,000 บาท</li>
+    <li>ในกรณี Check in ก่อนเวลา หรือ Check out เกินเวลา ทางบ้านพักขอเก็บค่าบริการเพิ่ม ชั่วโมงละ 500 บาท</li>
+  </ul>
+  <h3>สถานที่และแหล่งท่องเที่ยวใกล้เคียง</h3>
+  <ul>
+    <li>ร้านสะดวกซื้อ 7-Eleven - 2 km (สามารถสั่งเดลิเวอรี่ได้)</li>
+    <li>วัดบุญราศีนิโคลาส บุญเกิด กฤษบำรุง เขาใหญ่ - 3 กม.</li>
+    <li>Tellus Cafe Khaoyai - 3 กม. </li>
+    <li>ครัวสเต็ก 95 & คาเฟ่ - 8 กม.</li>
+    <li>Floryday Khaoyai Cafe & Flower - 10 กม.</li>
+    <li>Toscana Valley - 11 กม.</li>
+    <li>Blossom bloom - 14 กม.</li>
+    <li>donghousekhaoyai - 15 กม.</li>
+    <li>My Ozone Khaoyai - 16 กม.</li>
+    <li>Art Tree Cafe - 19 กม.</li>
+    <li>The Ozone Panorama - 21 กม.</li>
+    <li>โบนันซ่าเขาใหญ่ - 27 กม.</li>
+    <li>อุทยานแห่งชาติเขาใหญ่ - 27 กม.</li>
+    <li>Primo Piazza - 35 กม.</li>
+  </ul>
+</section>
+
 
   <footer class="footer">
     <div class="footer-content">
