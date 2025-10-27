@@ -227,6 +227,16 @@ body {
   border-radius: 6px;
 }
 
+@media (max-width: 600px) {
+  .responsive-iframe-container {
+    padding-bottom: 120%; /* เพิ่มความสูงให้เหมาะกับหน้าจอเล็ก */
+    min-height: 600px;    /* เพิ่มความสูงขั้นต่ำด้วย */
+  }
+  .responsive-iframe-container iframe {
+    min-height: 600px;
+  }
+}
+
 .calendar-legend {
   display: flex;
   justify-content: center;
